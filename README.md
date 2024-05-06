@@ -108,6 +108,7 @@ cd /tmp/datafolder
 
 ## Port forwarding
 ### SSH:
+On kali:
 ```
 ssh -N -L 80:localhost:80 user@10.10.10.10 -C
 ```
@@ -117,6 +118,7 @@ ssh -N -L 80:localhost:80 user@10.10.10.10 -C
 ./chisel client 10.10.16.3:8000 R:100:172.17.0.1:100 #Client -- Victim
 ```
 ### Socat:
+On victim:
 ```
 socat tcp-listen:8080,reuseaddr,fork tcp:localhost:9200 &
 ```
