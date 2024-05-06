@@ -6,7 +6,7 @@ A collection of commands, tools, techniques and procedures of the purplestorm ct
 
 - [Tooling](#tooling)
   - [Swaks](#swaks)
-  - [Ligolo-ng]
+  - [Ligolo-ng](#ligolo-ng)
  
 ## Tooling
 
