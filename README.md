@@ -10,6 +10,7 @@ A collection of commands, tools, techniques and procedures of the purplestorm ct
 - [Stabilizing Linux shell](#stabilizing-linux-shell)
 - [Exfiltrating Data](#exfiltrating-data)
 - [Port forwarding](#port-forwarding-1)
+- [Transfering files](#transfering-files)
 - [Sliver](Sliver.md)
 ## Tooling
 
