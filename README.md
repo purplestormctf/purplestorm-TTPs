@@ -69,7 +69,7 @@ $ sudo ip r add 172.16.1.0/24 dev ligolo
 ```
 
 
-### Stabilizing Linux shell
+# Stabilizing Linux shell
 ```
 script /dev/null -c bash
 CTRL+Z
