@@ -8,7 +8,7 @@ A collection of commands, tools, techniques and procedures of the purplestorm ct
   - [Swaks](#swaks)
   - [Ligolo-ng](#ligolo-ng)
 - [Stabilizing Linux shell](#stabilizingLinuxShell)
-- [[Sliver]]
+- [Sliver](Sliver.md)
 ## Tooling
 
 ### Swaks
