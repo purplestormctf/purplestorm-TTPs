@@ -78,7 +78,7 @@ reset
 screen
 ```
 
-# Exfilrating Data
+# Exfiltrating Data
 ## via TCP socket, ebcdic and base64
 ### On kali:
 ```
