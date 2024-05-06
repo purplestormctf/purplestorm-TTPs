@@ -104,3 +104,18 @@ On kali:
 ```
 cd /tmp/datafolder
 ```
+
+## Port forwarding
+### SSH:
+```
+ssh -N -L 80:localhost:80 user@10.10.10.10 -C
+```
+### Chisel:
+```
+./chisel server -p 8000 --reverse #Server -- Attacker
+./chisel client 10.10.16.3:8000 R:100:172.17.0.1:100 #Client -- Victim
+```
+### Socat:
+```
+socat tcp-listen:8080,reuseaddr,fork tcp:localhost:9200 &
+```
