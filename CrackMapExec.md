@@ -1,10 +1,5 @@
 # CrackMapExec
 
-Category: Toolkit
-Field: Misc
-
-[CME DB usage ](https://www.notion.so/CME-DB-usage-e46fded76eba47108feeda8e0845336d?pvs=21)
-
 # **Connexions**
 
 ---
