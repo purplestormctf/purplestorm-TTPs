@@ -9,6 +9,7 @@ A collection of commands, tools, techniques and procedures of the purplestorm ct
   - [Ligolo-ng](#ligolo-ng)
 - [Stabilizing Linux shell](#stabilizing-linux-shell)
 - [Exfiltrating Data](#exfiltrating-data)
+- [Port forwarding](#port-forwarding-1)
 - [Sliver](Sliver.md)
 ## Tooling
 
