@@ -12,6 +12,8 @@ A collection of commands, tools, techniques and procedures of the purplestorm ct
 - [Port forwarding](#port-forwarding-1)
 - [Transfering files](#transfering-files)
 - [Sliver](Sliver.md)
+- [CrackMapExec](CrackMapExec.md)
+- [SQL Injection.md](SQL Injection.md)
 ## Tooling
 
 ### Swaks
