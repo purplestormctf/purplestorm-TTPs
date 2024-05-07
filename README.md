@@ -7,12 +7,12 @@ A collection of commands, tools, techniques and procedures of the purplestorm ct
 - [Tooling](#tooling)
   - [Swaks](#swaks)
   - [Ligolo-ng](#ligolo-ng)
+  - [CrackMapExec](CrackMapExec.md)
 - [Stabilizing Linux shell](#stabilizing-linux-shell)
 - [Exfiltrating Data](#exfiltrating-data)
 - [Port forwarding](#port-forwarding-1)
 - [Transfering files](#transfering-files)
 - [Sliver](Sliver.md)
-- [CrackMapExec](CrackMapExec.md)
 - [SQL Injection](SQL%20Injection.md)
 ## Tooling
 
