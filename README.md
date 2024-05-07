@@ -13,7 +13,7 @@ A collection of commands, tools, techniques and procedures of the purplestorm ct
 - [Transfering files](#transfering-files)
 - [Sliver](Sliver.md)
 - [CrackMapExec](CrackMapExec.md)
-- [SQL Injection.md](SQL Injection.md)
+- [SQL Injection](SQL%20Injection.md)
 ## Tooling
 
 ### Swaks
