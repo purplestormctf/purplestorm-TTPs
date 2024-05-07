@@ -173,3 +173,7 @@ via base64:
 cat shell.sh | base64 -w 0   # On attacker
 echo <base64encoded> | base64 -d > shell.sh   # On target
 ```
+via scp:
+```
+scp some.sh user@10.10.10.10:/tmp/some.sh   # On attacker
+```
