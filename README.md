@@ -138,6 +138,7 @@ On victim:
 socat tcp-listen:8080,reuseaddr,fork tcp:localhost:9200 &
 ```
 ### Netcat:
+On victim:
 ```
 nc -nlvp 8080 -c "nc localhost 1234"
 ```
