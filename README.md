@@ -137,7 +137,10 @@ On victim:
 ```
 socat tcp-listen:8080,reuseaddr,fork tcp:localhost:9200 &
 ```
-
+### Netcat:
+```
+nc -nlvp 8080 -c "nc localhost 1234"
+```
 ## Transfering files
 ### Windows
 cmd:
