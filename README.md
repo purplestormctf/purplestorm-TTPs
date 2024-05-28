@@ -8,6 +8,7 @@ A collection of commands, tools, techniques and procedures of the purplestorm ct
   - [Swaks](#swaks)
   - [Ligolo-ng](#ligolo-ng)
   - [CrackMapExec](CrackMapExec.md)
+- [Reverse Shell](#reverse-shell)
 - [Stabilizing Linux shell](#stabilizing-linux-shell)
 - [Exfiltrating Data](#exfiltrating-data)
 - [Port forwarding](#port-forwarding-1)
@@ -75,7 +76,7 @@ $ sudo ip r add 172.16.1.0/24 dev ligolo
 ```
 
 ## Reverse Shell
-[source][https://github.com/calebstewart/pwncat]
+[source](https://github.com/calebstewart/pwncat)
 ```
 pip install pwncat-cs
 Listener: pwncat-cs 192.168.1.1 4444
