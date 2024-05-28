@@ -74,6 +74,13 @@ $ sudo ip r add 172.16.1.0/24 dev ligolo
 [Agent : user@target] » listener_add --addr <RHOST>:<LPORT> --to <LHOST>:<LPORT> --tcp
 ```
 
+## Reverse Shell
+[source][https://github.com/calebstewart/pwncat]
+```
+pip install pwncat-cs
+Listener: pwncat-cs 192.168.1.1 4444
+(To change from pwncat shell to local shell, use Ctrl+D)
+```
 
 ## Stabilizing Linux shell
 ```
