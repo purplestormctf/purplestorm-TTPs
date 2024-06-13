@@ -138,7 +138,7 @@ function rdp_noauth() {
 }
 function ligolo-server() {
     if ! ip link show ligolo &>/dev/null; then
-        sudo ip tuntap add user kali mode tun ligolo
+        sudo ip tuntap add user ${USER} mode tun ligolo
         sudo ip link set ligolo up
     fi
 
