@@ -4,7 +4,7 @@ A collection of commands, tools, techniques and procedures of the purplestorm ct
 
 ## Table of Contents
 
-- [Basics]
+- [Basics](#basics)
   - [Stabilizing Linux shell](#stabilizing-linux-shell)
   - [Port forwarding](#port-forwarding-1)
   - [Transfering files](#transfering-files)
