@@ -19,6 +19,7 @@ A collection of commands, tools, techniques and procedures of the purplestorm ct
 - [Payloads](#payloads)
   - [Reverse Shell](#reverse-shell)
 - [Exfiltrating Data](#exfiltrating-data)
+- [Fixing SSH Problems](#fixing-ssh-problems)
 
 
 ## Basics
@@ -242,4 +243,29 @@ via pscp:
 
 ```
 pscp Administrator@10.10.10.10:/Users/Administrator/Downloads/something.txt
+```
+
+## Fixing SSH Problems
+
+### SSH Key Cleanup
+
+Sometimes, exfiltrated SSH keys will cause ugly errors, such as `Load key "id_rsa": error in libcrypto`. This can often be corrected
+with simple cleanup.
+
+```bash
+dos2unix id_rsa
+vim --clean id_rsa
+chmod 400 id_rsa
+
+# One line version
+dos2unix id_rsa; vim --clean -c 'wq' id_rsa; chmod 400 id_rsa
+```
+
+### RSA Problems
+
+Newer versions of SSH might complain about RSA as such. This can be corrected by adding the following to `~/.ssh/config`.
+
+```sh
+HostKeyAlgorithms +ssh-rsa
+PubkeyAcceptedAlgorithms +ssh-rsa
 ```
